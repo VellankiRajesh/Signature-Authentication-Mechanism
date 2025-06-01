@@ -1,0 +1,313 @@
+@import 'bootstrap/bootstrap';
+@import 'bootstrap/variables';
+@import 'bootstrap/mixins';
+
+$font-primary: 'Lato', Arial, sans-serif;
+$primary: #b96b9f;
+$secondary: #17223b;
+$white: #ffffff;
+$black: #333;
+$gray: #f8f9fd;
+
+body {
+    font-family: $font-primary;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: normal;
+    background: $gray;
+    color: lighten($black, 50%);
+    transition: all 0.3s ease;
+}
+
+a {
+    transition: .3s all ease;
+    color: $primary;
+    text-decoration: none;
+    &:hover, &:focus {
+        color: $primary;
+        text-decoration: none;
+        box-shadow: none;
+    }
+}
+
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+    line-height: 1.5;
+    font-weight: 400;
+    font-family: $font-primary;
+    color: $black;
+}
+
+.bg-primary {
+    background: $primary !important;
+}
+
+.ftco-section {
+    padding: 7em 0;
+    @include media-breakpoint-up(sm) {
+        padding: 6em 0;
+    }
+}
+
+.ftco-no-pt {
+    padding-top: 0;
+}
+
+.ftco-no-pb {
+    padding-bottom: 0;
+}
+
+// HEADING SECTION
+.heading-section {
+    font-size: 28px;
+    color: $black;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    @include media-breakpoint-up(md) {
+        font-size: 36px;
+    }
+}
+
+// COVER BG
+.img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: background 0.5s ease;
+}
+
+// LOGIN WRAP
+.login-wrap {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: $white;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+    box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+    padding: 20px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 20px 40px -15px rgba(0, 0, 0, 0.3);
+    }
+
+    h3 {
+        font-weight: 300;
+        text-align: center;
+    }
+}
+
+.half {
+    width: 100%;
+    @include media-breakpoint-up(lg) {
+        width: 50%;
+    }
+}
+
+.form-group {
+    position: relative;
+    z-index: 0;
+    margin-bottom: 20px !important;
+    a {
+        color: $white;
+    }
+}
+
+// FORM CONTROL
+.form-control {
+    height: 48px;
+    background: $white;
+    color: $black;
+    font-size: 16px;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    &:focus, &:active {
+        outline: none !important;
+        box-shadow: none;
+        border-color: $primary;
+    }
+
+    &::-webkit-input-placeholder {
+        color: rgba(0, 0, 0, 0.2) !important;
+    }
+
+    &::-moz-placeholder {
+        color: rgba(0, 0, 0, 0.2) !important;
+    }
+
+    &:-ms-input-placeholder {
+        color: rgba(0, 0, 0, 0.2) !important;
+    }
+
+    &:-moz-placeholder {
+        color: rgba(0, 0, 0, 0.2) !important;
+    }
+
+    &:focus + .form-control-placeholder,
+    &:valid + .form-control-placeholder {
+        transform: translate3d(0, -120%, 0);
+        padding: 7px 0 0 0;
+        opacity: 1;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1px;
+        color: $primary;
+        font-weight: 700;
+    }
+}
+
+.form-control-placeholder {
+    position: absolute;
+    top: 2px;
+    padding: 7px 0 0 15px;
+    transition: all 400ms ease;
+    opacity: 0.6;
+}
+
+// SOCIAL MEDIA
+.social-media {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    .social-icon {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: $white;
+        font-size: 16px;
+        margin: 0 5px;
+        border-radius: 50%;
+        transition: background 0.3s ease, color 0.3s ease;
+        span {
+            color: $primary;
+        }
+
+        &:hover {
+            background: $primary;
+            span {
+                color: $white;
+            }
+        }
+    }
+}
+
+// CHECKBOX STYLE
+.checkbox-wrap {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    user-select: none;
+}
+
+.checkbox-wrap input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid $black;
+    background: $white;
+    border-radius: 3px;
+    transition: background 0.3s ease;
+}
+
+.checkmark:after {
+    content: "\f0c8";
+    font-family: "FontAwesome";
+    position: absolute;
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    margin-top: -4px;
+    transition: color 0.3s ease;
+}
+
+.checkbox-wrap input:checked ~ .checkmark:after {
+    content: "\f14a";
+    color: $primary;
+}
+
+// BUTTON
+.btn {
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: none !important;
+
+    &:hover, &:active, &:focus {
+        outline: none;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &.btn-secondary {
+        background: $secondary !important;
+        border: 1px solid $secondary !important;
+        color: $white !important;
+        &:hover {
+            background: transparent;
+            color: $secondary;
+        }
+    }
+
+    &.btn-outline-secondary {
+        border: 1px solid $secondary;
+        background: transparent;
+        color: $secondary;
+        &:hover {
+            background: $secondary;
+            color: $white;
+        }
+    }
+}
+
+// RESPONSIVE MEDIA QUERIES
+@include media-breakpoint-up(sm) {
+    .login-wrap {
+        padding: 40px;
+    }
+
+    .form-control {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .login-wrap {
+        padding: 60px;
+    }
+
+    .btn {
+        font-size: 18px;
+        padding: 14px 28px;
+    }
+
+    .ftco-section {
+        padding: 8em 0;
+    }
+}
