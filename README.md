@@ -27,6 +27,7 @@ git clone (https://github.com/VellankiRajesh/Signature-Authentication-Mechanism.
 
 cd Signature-Authentication-Mechanism
 
+---
 
 ### 2️⃣ Create & Activate Virtual Environment
 
@@ -38,15 +39,19 @@ source myenv/bin/activate
 # For Windows:
 myenv\Scripts\activate
 
+---
 
 ### 3️⃣ Install Requirements
 
 pip install -r requirements.txt
 
+---
+
 ### 4️⃣ Run the Flask App
 
 python app.py
 
+---
 
 Go to your browser and open:
 http://127.0.0.1:5000
