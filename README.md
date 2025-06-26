@@ -24,6 +24,7 @@ This system uses computer vision and machine learning to compare uploaded signat
 ### 1️⃣ Clone the Repository
 
 git clone (https://github.com/VellankiRajesh/Signature-Authentication-Mechanism.git)
+
 cd Signature-Authentication-Mechanism
 
 
